@@ -117,7 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="code.Text" xml:space="preserve">
+    <value>static string devolverPalabraMasLarga(string cadena) 
+{
+    string[] palabras = cadena.Split(' ');
+
+    int tamano = 0;
+    int posicion = 0;
+
+    for (int i = 0; i &lt; palabras.Length; i++)
+    {
+        if (palabras[i].Length &gt; tamano)
+        {
+            tamano = palabras[i].Length;
+            posicion = i;
+        }
+    }
+
+    return palabras[posicion];
+}</value>
+  </data>
 </root>
